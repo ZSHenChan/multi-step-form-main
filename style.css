@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main{
+    background-color: hsl(217, 100%, 97%);
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    min-height: 10rem;
+    width: 100vw;
+    background-image: url("assets/images/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.headerNum{
+    padding: 0.3rem;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.85rem;
+    margin: 0.5rem;
+    border: solid 0.08rem hsl(229, 24%, 87%);
+    border-radius: 50%;
+    color: hsl(229, 24%, 87%);
+    height: 2rem;
+    width: 2rem;
+
+    transform: translateY(-1rem);
+}
+.headerNum:hover{
+    background-color: hsl(228, 100%, 84%);
+    color: hsl(213, 96%, 18%);
+    border-color: transparent;
+}
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 20rem;
+
+    transform: translateY(-3.5rem);
+}
+.content h1{
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    color: hsl(213, 96%, 18%);
+}
+.content p{
+    color:hsl(231, 11%, 63%);
+    margin-bottom: 1.5rem;
+}
+.user-input{
+    display: flex;
+    flex-direction: column;
+}
+.user-input input{
+    min-height: 2.2rem;
+    text-indent: 0.7rem;
+    outline: none;
+    border-radius: 0.4rem;
+    border: solid 0.01rem hsl(231, 11%, 63%);
+    margin: 0.4rem 0 1.3rem;
+}
+.user-input label{
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+}
+.bottom{
+    background-color: white;
+    min-height: 5rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom button{
+    margin: 1rem;
+    height: 2.5rem;
+  
+}
+#goBack{
+    background-color: transparent;
+    border: transparent;
+    color: hsl(231, 11%, 63%);
+    font-size: 0.9rem;
+}
+#goBack:hover{
+    cursor: pointer;
+}
+#nextStep{
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border: transparent;
+    border-radius: 0.3rem;
+}
+#nextStep:hover{
+    cursor: pointer;
+}
