@@ -37,7 +37,7 @@ header{
 
     transform: translateY(-1rem);
 }
-.headerNum:hover{
+.headerNum:hover, #current-header{
     background-color: hsl(228, 100%, 84%);
     color: hsl(213, 96%, 18%);
     border-color: transparent;
@@ -60,12 +60,13 @@ header{
 }
 .content h1{
     font-size: 1.7rem;
-    margin-bottom: 0.5rem;
     color: hsl(213, 96%, 18%);
 }
 .content p{
     color:hsl(231, 11%, 63%);
-    margin-bottom: 1.5rem;
+}
+#select-plan{
+    margin-bottom: 1rem;
 }
 .user-input{
     display: flex;
@@ -105,7 +106,7 @@ header{
 #goBack:hover{
     cursor: pointer;
 }
-#nextStep{
+#nextStep, #lastNextStep{
     padding: 0.5rem 1rem;
     color: white;
     background-color: hsl(213, 96%, 18%);
@@ -114,4 +115,210 @@ header{
 }
 #nextStep:hover{
     cursor: pointer;
+}
+
+/* STep 2 - plan selection webpage */
+
+.user-plan-option-box{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    border: solid 0.1rem hsl(229, 24%, 87%);
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+.user-plan-option-box img{
+    width: 3.5rem;
+    margin-right: 1rem;
+
+}
+.user-plan-option-inner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-0.4rem);
+}
+.user-plan-option-inner-box h3{
+    color: hsl(213, 96%, 18%);
+}
+
+input[type="radio"]{
+    position: absolute;
+    display: none;
+}
+input[type="radio"], .user-plan-option-box{
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+input + .user-plan-option-box{
+    cursor: pointer;
+}
+
+input[type="radio"]:hover + label .user-plan-option-box,
+input[type="radio"]:checked + label .user-plan-option-box{
+    border: solid 0.1rem hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);
+}
+
+/* subscription length */
+.plan-subscription-length{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 4rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    background-color: hsl(217, 100%, 97%);
+}
+.plan-subscription-length h3{
+    font-size: 1rem;
+    color: hsl(213, 96%, 18%);
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 1.8rem 0 1.5rem;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* slider */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .plan-subscription-length input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  /* Step 3 - add-ons */
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  label{
+    font-size: 0.9rem;
+    display: flex;
+    /* box-sizing: border-box; */
+    border: solid 0.1rem hsl(229, 24%, 87%);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.7rem;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.add-ons-option-checkbox{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark{
+    align-self: center;
+    border-radius: 25%;
+    height: 1.05rem;
+    width: 1.1rem;
+    border: solid 0.1rem hsl(243, 100%, 62%);
+}
+input:checked ~ .checkmark{
+    background-color: hsl(243, 100%, 62%);
+}
+.checkmark:after{
+    content:"";
+    position: relative;
+    left: 0.28rem;
+    width: 0.3rem;
+    height: 0.6rem;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: none;
+}
+input:checked ~ .checkmark:after{
+    display: block;
+}
+input:checked + .content label{
+    border: solid 0.1rem hsl(243, 100%, 62%);
+}
+.add-ons-option-outer-box{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-ons-option-checkbox{
+    display: flex;
+    position: absolute;
+    align-self: center;
+    color: hsl(229, 24%, 87%);
+}
+.user-plan-option-inner-box{
+    position: relative;
+    top:0.3rem;
+    min-height: 3rem;
+    line-height: 1.4rem;
+    left: 1rem;
+}
+.user-plan-option-inner-box h3{
+    font-size: 1.1rem;
+}
+.user-plan-option-inner-box p{
+    font-size: 0.8rem;
+}
+.isChecked{
+    border: solid 0.1rem hsl(243, 100%, 62%);
+}
+
+/* Step 4 - finishing up */
+#lastNextStep{
+    background-color: hsl(243, 100%, 62%);
 }

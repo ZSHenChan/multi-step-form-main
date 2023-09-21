@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main>
+  <div class="container">
+    <header>
+      <div class="headerNum">1</div>
+      <div class="headerNum" id="current-header">2</div>
+      <div class="headerNum">3</div>
+      <div class="headerNum">4</div>
+    </header>
+    <div class="content">
+      <h1 id="select-plan">Select your plan</h1>
+      <p id="select-plan">You have the option of monthly or yearly billing.</p>
+      <form>
+
+        <input type="radio" name="plan" class="user-plan-option" id="arcade" value="arcade", checked="checked">
+        <label for="arcade">
+          <div class="user-plan-option-box">
+              <img src="assets/images/icon-arcade.svg" alt="icon-arcade">
+              <div class="user-plan-option-inner-box">
+                    <h3>Arcade</h3>
+                    <p>$9/mo</p>
+              </div>
+          </div>
+        </label>
+        <input type="radio" name="plan" class="user-plan-option" id="advanced" value="advanced">
+        <label for="advanced"> 
+          <div class="user-plan-option-box">
+              <img src="assets/images/icon-advanced.svg" alt="icon-advanced">
+              <div class="user-plan-option-inner-box">
+                    <h3>Advanced</h3>
+                    <p>$12/mo</p>
+              </div>
+          </div>
+        </label>
+        <input type="radio" name="plan" class="user-plan-option" id="pro" value="pro">
+        <label for="pro">
+          <div class="user-plan-option-box">
+              <img src="assets/images/icon-pro.svg" alt="icon-pro">
+              <div class="user-plan-option-inner-box">
+                    <h3>Pro</h3>
+                    <p>$15/mo</p>
+              </div>
+          </div>
+        </label>
+
+        <div class="plan-subscription-length">
+          <h3>Monthly</h3>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <h3>Yearly</h3>
+        </div>
+        
+      </form>
+      
+    </div>
+    <div class="bottom">
+      <button id="goBack">Go Back</button>
+      <button id="nextStep">Next Step</button>
+    </div>
+  </div>
+  
+</main>
+</body>
+</html>
