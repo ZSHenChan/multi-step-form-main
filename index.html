@@ -1,57 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <title>Frontend Mentor | Multi-step form</title>
 
-  <title>Frontend Mentor | Multi-step form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-<main>
-  <div class="container">
-    <header>
-      <div class="headerNum" id="current-header">1</div>
-      <div class="headerNum">2</div>
-      <div class="headerNum">3</div>
-      <div class="headerNum">4</div>
-    </header>
-    <div class="content">
-      <h1>Personal Info</h1>
-      <p>Please provide your name, email address, and phone number.</p>
-      <form>
-        <div class="user-input">
-          <label for="userName">Name</label>
-          <input type="text" id="userName" placeholder="e.g. Stephen King">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <div class="headerNum" id="current-header">1</div>
+          <div class="headerNum">2</div>
+          <div class="headerNum">3</div>
+          <div class="headerNum">4</div>
+        </header>
+        <div class="content">
+          <h1>Personal Info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+          <form id="form-index">
+            <div class="user-input">
+              <label for="userName">Name</label>
+              <input
+                type="text"
+                id="userName"
+                placeholder="e.g. Stephen King"
+              />
+            </div>
+            <div class="user-input">
+              <label for="userEmail">Email Address</label>
+              <input
+                type="text"
+                id="userEmail"
+                placeholder=" e.g. stephenking@lorem.com"
+                onkeyup="validateEmail()"
+                required
+              />
+              <p id="invalid-email-msg">*Invalid email address</p>
+            </div>
+            <div class="user-input">
+              <label for="userPhoneNum">Phone Number</label>
+              <input
+                type="number"
+                id="userPhoneNum"
+                placeholder="e.g. +1 234 567 890"
+              />
+            </div>
+          </form>
         </div>
-        <div class="user-input">
-          <label for="userEmail">Email Address</label>
-          <input type="text" id="userEmail" placeholder=" e.g. stephenking@lorem.com">
+        <div class="bottom">
+          <button id="goBack" style="opacity: 0%">Go Back</button>
+          <button class="nextStep" id="nextStep-index" onclick="submitIndex()">
+            Next Step
+          </button>
         </div>
-        <div class="user-input">
-          <label for="userPhoneNum">Phone Number</label>
-          <input type="number" id="userPhoneNum" placeholder="e.g. +1 234 567 890">
-        </div>
-      </form>
-    </div>
-    <div class="bottom">
-      <button id="goBack">Go Back</button>
-      <button id="nextStep">Next Step</button>
-    </div>
-  </div>
-
-</main>
-</body>
+      </div>
+    </main>
+  </body>
+  <script src="js.js"></script>
 </html>

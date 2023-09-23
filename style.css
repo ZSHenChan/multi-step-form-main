@@ -37,7 +37,7 @@ header{
 
     transform: translateY(-1rem);
 }
-.headerNum:hover, #current-header{
+#current-header{
     background-color: hsl(228, 100%, 84%);
     color: hsl(213, 96%, 18%);
     border-color: transparent;
@@ -61,9 +61,11 @@ header{
 .content h1{
     font-size: 1.7rem;
     color: hsl(213, 96%, 18%);
+    margin-bottom: 1rem;
 }
 .content p{
     color:hsl(231, 11%, 63%);
+    margin-bottom: 1rem;
 }
 #select-plan{
     margin-bottom: 1rem;
@@ -71,14 +73,32 @@ header{
 .user-input{
     display: flex;
     flex-direction: column;
+    margin: 0.4rem 0 1.3rem;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    
 }
 .user-input input{
     min-height: 2.2rem;
     text-indent: 0.7rem;
     outline: none;
     border-radius: 0.4rem;
-    border: solid 0.01rem hsl(231, 11%, 63%);
-    margin: 0.4rem 0 1.3rem;
+    border: solid 0.01rem hsl(231, 11%, 63%); 
+    margin: 0;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.user-input p{
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+    color: red;
+    font-size: 0.7rem;
+    text-indent: 0.8rem;
+    opacity: 0%;
 }
 .user-input label{
     color: hsl(213, 96%, 18%);
@@ -103,11 +123,12 @@ header{
     color: hsl(231, 11%, 63%);
     font-size: 0.9rem;
 }
-#goBack:hover{
+#goBack, .nextStep:hover{
     cursor: pointer;
 }
-#nextStep, #lastNextStep{
-    padding: 0.5rem 1rem;
+.nextStep, #lastNextStep{
+    margin:0 10rem;
+    padding: 0.5rem 1.5rem;
     color: white;
     background-color: hsl(213, 96%, 18%);
     border: transparent;
@@ -128,6 +149,9 @@ header{
     padding: 1rem;
     align-items: center;
     margin-bottom: 0.7rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 .user-plan-option-box img{
     width: 3.5rem;
@@ -172,6 +196,9 @@ input[type="radio"]:checked + label .user-plan-option-box{
     margin-top: 2rem;
     border-radius: 1rem;
     background-color: hsl(217, 100%, 97%);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 .plan-subscription-length h3{
     font-size: 1rem;
@@ -183,6 +210,9 @@ input[type="radio"]:checked + label .user-plan-option-box{
     width: 60px;
     height: 34px;
     margin: 0 1.8rem 0 1.5rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   }
   
   /* Hide default HTML checkbox */
@@ -190,6 +220,7 @@ input[type="radio"]:checked + label .user-plan-option-box{
     opacity: 0;
     width: 0;
     height: 0;
+    
   }
   
   /* The slider */
@@ -203,6 +234,7 @@ input[type="radio"]:checked + label .user-plan-option-box{
     background-color: hsl(213, 96%, 18%);
     -webkit-transition: .4s;
     transition: .4s;
+    -webkit-tap-highlight-color: transparent;
   }
   
   /* slider */
@@ -227,10 +259,12 @@ input[type="radio"]:checked + label .user-plan-option-box{
   /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
+    
   }
   
   .slider.round:before {
     border-radius: 50%;
+    
   }
 
 
@@ -239,10 +273,9 @@ input[type="radio"]:checked + label .user-plan-option-box{
     display: flex;
     flex-direction: column;
   }
-  label{
+  .add-ons label{
     font-size: 0.9rem;
     display: flex;
-    /* box-sizing: border-box; */
     border: solid 0.1rem hsl(229, 24%, 87%);
     border-radius: 1rem;
     padding: 1rem;
@@ -253,6 +286,7 @@ input[type="radio"]:checked + label .user-plan-option-box{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .add-ons-option-checkbox{
     position: absolute;
@@ -314,11 +348,72 @@ input:checked + .content label{
 .user-plan-option-inner-box p{
     font-size: 0.8rem;
 }
-.isChecked{
+form .isChecked{
     border: solid 0.1rem hsl(243, 100%, 62%);
 }
 
 /* Step 4 - finishing up */
 #lastNextStep{
     background-color: hsl(243, 100%, 62%);
+}
+.bill-container{
+    background-color: hsl(217, 100%, 97%);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.bill-plan-length{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+    border-bottom: solid 0.1rem hsl(229, 24%, 87%);
+}
+.bill-plan-length-left{
+    padding: 0.3rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+}
+.bill-plan-length-right{
+    align-self: flex-end;
+    padding: 0.8rem 0;
+}
+.bill-plan-length-left button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: left;
+    text-decoration: underline;
+    color: hsl(231, 11%, 63%);
+}
+.bill-plan-length-left button:hover{
+    cursor: pointer;
+}
+.bill-add-ons{
+    padding: 1rem 0rem;
+}
+.bill-add-ons-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+.bill-add-ons-name{
+    color: hsl(231, 11%, 63%);
+    font-size: 1rem;
+}
+.bill-add-ons-price{
+    color: hsl(213, 96%, 18%);
+    letter-spacing: -0.05rem;
+}
+.bill-total{
+    color: hsl(231, 11%, 63%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bill-total-payable{
+    font-weight: 700;
+    color: hsl(243, 100%, 62%);
 }

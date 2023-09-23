@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body onload="billRetrieveInfo()">
+    <main>
+      <div class="container">
+        <header>
+          <div class="headerNum">1</div>
+          <div class="headerNum">2</div>
+          <div class="headerNum">3</div>
+          <div class="headerNum" id="current-header">4</div>
+        </header>
+        <div class="content">
+          <h1 id="select-plan">Finishing up</h1>
+          <p id="select-plan">
+            Double-check everything looks OK before confirming.
+          </p>
+          <div class="bill-container">
+            <div class="bill-plan-length">
+              <div class="bill-plan-length-left">
+                <div>
+                  <span id="bill-plan-123"></span>&nbsp<span
+                    id="bill-plan-length"
+                  ></span>
+                </div>
+                <button onclick="window.location.href = 'select-plan.html'">
+                  Change
+                </button>
+              </div>
+              <div class="bill-plan-length-right" id="bill-plan-price"></div>
+            </div>
 
-  <title>Frontend Mentor | Multi-step form</title>
+            <div class="bill-add-ons"></div>
+          </div>
+          <div class="bill-total">
+            <div class="bill-total-total">
+              <span>Total</span>&nbsp
+              <span id="bill-check-out-plan">(per month)</span>
+            </div>
+            <div class="bill-total-payable" id="bill-total-amount">$12/mo</div>
+          </div>
+        </div>
 
-</head>
-<body>
-<main>
-  <div class="container">
-    <header>
-      <div class="headerNum">1</div>
-      <div class="headerNum">2</div>
-      <div class="headerNum">3</div>
-      <div class="headerNum" id="current-header">4</div>
-    </header>
-    <div class="content">
-      <h1 id="select-plan">Finishing up</h1>
-      <p id="select-plan">Double-check everything looks OK before confirming.</p>
-      
-      
-    </div>
-    <div class="bottom">
-      <button id="goBack">Go Back</button>
-      <button id="lastNextStep" class="last-next-step">Next Step</button>
-    </div>
-  </div>
-  
-</main>
-</body>
-<script src="js.js"></script>
+        <div class="bottom">
+          <button
+            id="goBack"
+            onclick="window.location.href = 'pick-add-ons.html'"
+          >
+            Go Back
+          </button>
+          <button
+            class="nextStep"
+            style="background-color: hsl(243, 100%, 62%)"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js.js"></script>
 </html>

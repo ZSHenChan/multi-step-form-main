@@ -1,82 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <title>Frontend Mentor | Multi-step form</title>
 
-  <title>Frontend Mentor | Multi-step form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-<main>
-  <div class="container">
-    <header>
-      <div class="headerNum">1</div>
-      <div class="headerNum">2</div>
-      <div class="headerNum" id="current-header">3</div>
-      <div class="headerNum">4</div>
-    </header>
-    <div class="content">
-      <h1 id="select-plan">Pick add-ons</h1>
-      <p id="select-plan">Add-ons help enhance your gaming experience.</p>
-      <form>
-
-        <label for="online-service">
-          <input type="checkbox" class="add-ons-option-checkbox" id="online-service" value="online-service" onclick="UpdateFeatures(this)">
-          <span class="checkmark"></span>
-          <div class="add-ons-option-outer-box">
-              <div class="user-plan-option-inner-box">
-                  <h3>Online service</h3>
-                  <p>Access to multiplayer games</p>
-              </div>
-              <p class="add-ons-price">+$1/mo</p>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <div class="headerNum">1</div>
+          <div class="headerNum">2</div>
+          <div class="headerNum" id="current-header">3</div>
+          <div class="headerNum">4</div>
+        </header>
+        <div class="content">
+          <h1 id="select-plan">Pick add-ons</h1>
+          <p id="select-plan">Add-ons help enhance your gaming experience.</p>
+          <div class="add-ons">
+            <form>
+              <label for="online-service">
+                <input
+                  type="checkbox"
+                  class="add-ons-option-checkbox"
+                  id="online-service"
+                  value="Online Service"
+                  onclick="UpdateFeatures(this)"
+                />
+                <span class="checkmark"></span>
+                <div class="add-ons-option-outer-box">
+                  <div class="user-plan-option-inner-box">
+                    <h3>Online service</h3>
+                    <p>Access to multiplayer games</p>
+                  </div>
+                  <p class="add-ons-price">+$1/mo</p>
+                </div>
+              </label>
+              <label for="larger-storage" class="larger-storage">
+                <input
+                  type="checkbox"
+                  class="add-ons-option-checkbox"
+                  id="larger-storage"
+                  value="Larger Storage"
+                  onclick="UpdateFeatures(this)"
+                />
+                <span class="checkmark"></span>
+                <div class="add-ons-option-outer-box">
+                  <div class="user-plan-option-inner-box">
+                    <h3>Larger Storage</h3>
+                    <p>Extra 1TB of cloud save<</p>
+                  </div>
+                  <p class="add-ons-price">+$2/mo</p>
+                </div>
+              </label>
+              <label for="customizable-profit">
+                <input
+                  type="checkbox"
+                  class="add-ons-option-checkbox"
+                  id="customizable-profit"
+                  value="Customizable Profile"
+                  onclick="UpdateFeatures(this)"
+                />
+                <span class="checkmark"></span>
+                <div class="add-ons-option-outer-box">
+                  <div class="user-plan-option-inner-box">
+                    <h3>Customizable Profile</h3>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                  <p class="add-ons-price">+$3/mo</p>
+                </div>
+              </label>
+            </form>
           </div>
-        </label>
-        <label for="larger-storage" class="larger-storage">
-          <input type="checkbox" class="add-ons-option-checkbox" id="larger-storage" value="larger-storage" onclick="UpdateFeatures(this)">
-          <span class="checkmark"></span>
-          <div class="add-ons-option-outer-box">
-              <div class="user-plan-option-inner-box">
-                  <h3>Larger Storage</h3>
-                  <p>Extra 1TB of cloud save<</p>
-              </div>
-              <p class="add-ons-price">+$2/mo</p>
-          </div>
-        </label>  
-        <label for="customizable-profit">
-          <input type="checkbox" class="add-ons-option-checkbox" id="customizable-profit" value="larger-storage" onclick="UpdateFeatures(this)">
-          <span class="checkmark"></span>
-          <div class="add-ons-option-outer-box">
-              <div class="user-plan-option-inner-box">
-                  <h3>Customizable Profile</h3>
-                  <p>Custom theme on your profile</p>
-              </div>
-              <p class="add-ons-price">+$3/mo</p>
-          </div>
-        </label>        
-        
-      </form>
-      
-    </div>
-    <div class="bottom">
-      <button id="goBack">Go Back</button>
-      <button id="nextStep">Next Step</button>
-    </div>
-  </div>
-  
-</main>
-</body>
-<script src="js.js"></script>
+        </div>
+        <div class="bottom">
+          <button
+            id="goBack"
+            onclick="window.location.href = 'select-plan.html'"
+          >
+            Go Back
+          </button>
+          <button class="nextStep" type="submit" onclick="submitAddOns()">
+            Next Step
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js.js"></script>
 </html>
