@@ -32,7 +32,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="changePlan()">
     <main>
       <div class="container">
         <header>
@@ -61,7 +61,8 @@
                 <img src="assets/images/icon-arcade.svg" alt="icon-arcade" />
                 <div class="user-plan-option-inner-box">
                   <h3>Arcade</h3>
-                  <p>$9/mo</p>
+                  <p id="arcade-price">$9/mo</p>
+                  <h4 class="yearly-discount-text">2 months free</h4>
                 </div>
               </div>
             </label>
@@ -80,7 +81,8 @@
                 />
                 <div class="user-plan-option-inner-box">
                   <h3>Advanced</h3>
-                  <p>$12/mo</p>
+                  <p id="advanced-price">$12/mo</p>
+                  <h4 class="yearly-discount-text">2 months free</h4>
                 </div>
               </div>
             </label>
@@ -96,7 +98,8 @@
                 <img src="assets/images/icon-pro.svg" alt="icon-pro" />
                 <div class="user-plan-option-inner-box">
                   <h3>Pro</h3>
-                  <p>$15/mo</p>
+                  <p id="pro-price">$15/mo</p>
+                  <h4 class="yearly-discount-text">2 months free</h4>
                 </div>
               </div>
             </label>
@@ -104,7 +107,11 @@
             <div class="plan-subscription-length">
               <h3>Monthly</h3>
               <label class="switch">
-                <input type="checkbox" id="plan-length" />
+                <input
+                  type="checkbox"
+                  id="plan-length"
+                  onclick="changePlan()"
+                />
                 <span class="slider round"></span>
               </label>
               <h3>Yearly</h3>

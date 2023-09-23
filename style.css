@@ -347,6 +347,14 @@ input:checked + .content label{
 }
 .user-plan-option-inner-box p{
     font-size: 0.8rem;
+    margin: 0;
+}
+.yearly-discount-text{
+    color: hsl(213, 96%, 18%);
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0%;
+    transition: 0.5s;
 }
 form .isChecked{
     border: solid 0.1rem hsl(243, 100%, 62%);

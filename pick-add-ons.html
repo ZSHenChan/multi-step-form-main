@@ -32,7 +32,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="loadAddOns()">
     <main>
       <div class="container">
         <header>
@@ -60,7 +60,7 @@
                     <h3>Online service</h3>
                     <p>Access to multiplayer games</p>
                   </div>
-                  <p class="add-ons-price">+$1/mo</p>
+                  <p class="add-ons-price" id="onlineService">+$1/mo</p>
                 </div>
               </label>
               <label for="larger-storage" class="larger-storage">
@@ -77,7 +77,7 @@
                     <h3>Larger Storage</h3>
                     <p>Extra 1TB of cloud save<</p>
                   </div>
-                  <p class="add-ons-price">+$2/mo</p>
+                  <p class="add-ons-price" id="largerStorage">+$2/mo</p>
                 </div>
               </label>
               <label for="customizable-profit">
@@ -85,16 +85,16 @@
                   type="checkbox"
                   class="add-ons-option-checkbox"
                   id="customizable-profit"
-                  value="Customizable Profile"
+                  value="Customizable Profit"
                   onclick="UpdateFeatures(this)"
                 />
                 <span class="checkmark"></span>
                 <div class="add-ons-option-outer-box">
                   <div class="user-plan-option-inner-box">
-                    <h3>Customizable Profile</h3>
+                    <h3>Customizable Profit</h3>
                     <p>Custom theme on your profile</p>
                   </div>
-                  <p class="add-ons-price">+$3/mo</p>
+                  <p class="add-ons-price" id="customizableProfit">+$3/mo</p>
                 </div>
               </label>
             </form>
