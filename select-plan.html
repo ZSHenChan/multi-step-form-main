@@ -36,95 +36,125 @@
     <main>
       <div class="container">
         <header>
-          <div class="headerNum">1</div>
-          <div class="headerNum" id="current-header">2</div>
-          <div class="headerNum">3</div>
-          <div class="headerNum">4</div>
-        </header>
-        <div class="content">
-          <h1 id="select-plan">Select your plan</h1>
-          <p id="select-plan">
-            You have the option of monthly or yearly billing.
-          </p>
-          <form>
-            <input
-              type="radio"
-              name="plan"
-              class="user-plan-option"
-              id="arcade"
-              value="Arcade"
-              ,
-              checked="checked"
-            />
-            <label for="arcade">
-              <div class="user-plan-option-box">
-                <img src="assets/images/icon-arcade.svg" alt="icon-arcade" />
-                <div class="user-plan-option-inner-box">
-                  <h3>Arcade</h3>
-                  <p id="arcade-price">$9/mo</p>
-                  <h4 class="yearly-discount-text">2 months free</h4>
-                </div>
-              </div>
-            </label>
-            <input
-              type="radio"
-              name="plan"
-              class="user-plan-option"
-              id="advanced"
-              value="Advanced"
-            />
-            <label for="advanced">
-              <div class="user-plan-option-box">
-                <img
-                  src="assets/images/icon-advanced.svg"
-                  alt="icon-advanced"
-                />
-                <div class="user-plan-option-inner-box">
-                  <h3>Advanced</h3>
-                  <p id="advanced-price">$12/mo</p>
-                  <h4 class="yearly-discount-text">2 months free</h4>
-                </div>
-              </div>
-            </label>
-            <input
-              type="radio"
-              name="plan"
-              class="user-plan-option"
-              id="pro"
-              value="Pro"
-            />
-            <label for="pro">
-              <div class="user-plan-option-box">
-                <img src="assets/images/icon-pro.svg" alt="icon-pro" />
-                <div class="user-plan-option-inner-box">
-                  <h3>Pro</h3>
-                  <p id="pro-price">$15/mo</p>
-                  <h4 class="yearly-discount-text">2 months free</h4>
-                </div>
-              </div>
-            </label>
-
-            <div class="plan-subscription-length">
-              <h3>Monthly</h3>
-              <label class="switch">
-                <input
-                  type="checkbox"
-                  id="plan-length"
-                  onclick="changePlan()"
-                />
-                <span class="slider round"></span>
-              </label>
-              <h3>Yearly</h3>
+          <div class="headerNum">
+            <h3>1</h3>
+            <div class="header-desktop-text">
+              <p>STEP 1</p>
+              <h3>YOUR INFO</h3>
             </div>
-          </form>
-        </div>
-        <div class="bottom">
-          <button id="goBack" onclick="window.location.href = 'index.html'">
-            Go Back
-          </button>
-          <button class="nextStep" onclick="submitSelectPlan()">
-            Next Step
-          </button>
+          </div>
+          <div class="headerNum">
+            <h3 id="current-header">2</h3>
+            <div class="header-desktop-text">
+              <p>STEP 2</p>
+              <h3>SELECT PLAN</h3>
+            </div>
+          </div>
+          <div class="headerNum">
+            <h3>3</h3>
+            <div class="header-desktop-text">
+              <p>STEP 3</p>
+              <h3>ADD ONS</h3>
+            </div>
+          </div>
+          <div class="headerNum">
+            <h3>4</h3>
+            <div class="header-desktop-text">
+              <p>STEP 4</p>
+              <h3>SUMMARY</h3>
+            </div>
+          </div>
+        </header>
+
+        <div class="container-right">
+          <div class="container-right">
+            <div class="content">
+              <h1 id="select-plan">Select your plan</h1>
+              <p id="select-plan">
+                You have the option of monthly or yearly billing.
+              </p>
+              <form>
+                <input
+                  type="radio"
+                  name="plan"
+                  class="user-plan-option"
+                  id="arcade"
+                  value="Arcade"
+                  checked="checked"
+                />
+                <label for="arcade">
+                  <div class="user-plan-option-box">
+                    <img
+                      src="assets/images/icon-arcade.svg"
+                      alt="icon-arcade"
+                    />
+                    <div class="user-plan-option-inner-box">
+                      <h3>Arcade</h3>
+                      <p id="arcade-price">$9/mo</p>
+                      <h4 class="yearly-discount-text">2 months free</h4>
+                    </div>
+                  </div>
+                </label>
+                <input
+                  type="radio"
+                  name="plan"
+                  class="user-plan-option"
+                  id="advanced"
+                  value="Advanced"
+                />
+                <label for="advanced">
+                  <div class="user-plan-option-box">
+                    <img
+                      src="assets/images/icon-advanced.svg"
+                      alt="icon-advanced"
+                    />
+                    <div class="user-plan-option-inner-box">
+                      <h3>Advanced</h3>
+                      <p id="advanced-price">$12/mo</p>
+                      <h4 class="yearly-discount-text">2 months free</h4>
+                    </div>
+                  </div>
+                </label>
+                <input
+                  type="radio"
+                  name="plan"
+                  class="user-plan-option"
+                  id="pro"
+                  value="Pro"
+                />
+                <label for="pro">
+                  <div class="user-plan-option-box">
+                    <img src="assets/images/icon-pro.svg" alt="icon-pro" />
+                    <div class="user-plan-option-inner-box">
+                      <h3>Pro</h3>
+                      <p id="pro-price">$15/mo</p>
+                      <h4 class="yearly-discount-text">2 months free</h4>
+                    </div>
+                  </div>
+                </label>
+                <div class="plan-subscription-length">
+                  <h3>Monthly</h3>
+                  <label class="switch">
+                    <input
+                      type="checkbox"
+                      id="plan-length"
+                      onclick="changePlan()"
+                    />
+                    <span class="slider round"></span>
+                  </label>
+                  <h3>Yearly</h3>
+                </div>
+              </form>
+            </div>
+            <div class="bottom">
+              <button id="goBack" onclick="window.location.href = 'index.html'">
+                Go Back
+              </button>
+              <button class="nextStep" onclick="submitSelectPlan()">
+                Next Step
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </main>

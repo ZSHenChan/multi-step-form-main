@@ -25,56 +25,82 @@
     <main>
       <div class="container">
         <header>
-          <div class="headerNum">1</div>
-          <div class="headerNum">2</div>
-          <div class="headerNum">3</div>
-          <div class="headerNum" id="current-header">4</div>
+          <div class="headerNum">
+            <h3>1</h3>
+            <div class="header-desktop-text">
+              <p>STEP 1</p>
+              <h3>YOUR INFO</h3>
+            </div>
+          </div>
+          <div class="headerNum" ">
+            <h3>2</h3>
+            <div class="header-desktop-text">
+              <p>STEP 2</p>
+              <h3>SELECT PLAN</h3>
+            </div>
+          </div>
+          <div class="headerNum">
+            <h3>3</h3>
+            <div class="header-desktop-text">
+              <p>STEP 3</p>
+              <h3>ADD ONS</h3>
+            </div>
+          </div>
+          <div class="headerNum" >
+            <h3 id="current-header">4</h3>
+            <div class="header-desktop-text">
+              <p>STEP 4</p>
+              <h3>SUMMARY</h3>
+            </div>
+          </div>
         </header>
-        <div class="content">
-          <h1 id="select-plan">Finishing up</h1>
-          <p id="select-plan">
-            Double-check everything looks OK before confirming.
-          </p>
-          <div class="bill-container">
-            <div class="bill-plan-length">
-              <div class="bill-plan-length-left">
-                <div>
-                  <span id="bill-plan-123"></span>&nbsp<span
-                    id="bill-plan-length"
-                  ></span>
+        <div class="container-right">
+          <div class="content">
+            <h1 id="select-plan">Finishing up</h1>
+            <p id="select-plan">
+              Double-check everything looks OK before confirming.
+            </p>
+            <div class="bill-container">
+              <div class="bill-plan-length">
+                <div class="bill-plan-length-left">
+                  <div>
+                    <span id="bill-plan-123"></span>&nbsp<span
+                      id="bill-plan-length"
+                    ></span>
+                  </div>
+                  <button onclick="window.location.href = 'select-plan.html'">
+                    Change
+                  </button>
                 </div>
-                <button onclick="window.location.href = 'select-plan.html'">
-                  Change
-                </button>
+                <div class="bill-plan-length-right" id="bill-plan-price"></div>
               </div>
-              <div class="bill-plan-length-right" id="bill-plan-price"></div>
+              <div class="bill-add-ons"></div>
             </div>
-
-            <div class="bill-add-ons"></div>
-          </div>
-          <div class="bill-total">
-            <div class="bill-total-total">
-              <span>Total</span>&nbsp
-              <span id="bill-check-out-plan">(per month)</span>
+            <div class="bill-total">
+              <div class="bill-total-total">
+                <span>Total</span>&nbsp
+                <span id="bill-check-out-plan">(per month)</span>
+              </div>
+              <div class="bill-total-payable" id="bill-total-amount">
+                $12/mo
+              </div>
             </div>
-            <div class="bill-total-payable" id="bill-total-amount">$12/mo</div>
           </div>
-        </div>
-
-        <div class="bottom">
-          <button
-            id="goBack"
-            onclick="window.location.href = 'pick-add-ons.html'"
-          >
-            Go Back
-          </button>
-          <button
-            class="nextStep"
-            style="background-color: hsl(243, 100%, 62%)"
-            onclick="checkOut()"
-          >
-            Confirm
-          </button>
+          <div class="bottom">
+            <button
+              id="goBack"
+              onclick="window.location.href = 'pick-add-ons.html'"
+            >
+              Go Back
+            </button>
+            <button
+              class="nextStep"
+              style="background-color: hsl(243, 100%, 62%)"
+              onclick="checkOut()"
+            >
+              Confirm
+            </button>
+          </div>
         </div>
       </div>
     </main>

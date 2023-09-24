@@ -36,80 +36,106 @@
     <main>
       <div class="container">
         <header>
-          <div class="headerNum">1</div>
-          <div class="headerNum">2</div>
-          <div class="headerNum" id="current-header">3</div>
-          <div class="headerNum">4</div>
-        </header>
-        <div class="content">
-          <h1 id="select-plan">Pick add-ons</h1>
-          <p id="select-plan">Add-ons help enhance your gaming experience.</p>
-          <div class="add-ons">
-            <form>
-              <label for="online-service">
-                <input
-                  type="checkbox"
-                  class="add-ons-option-checkbox"
-                  id="online-service"
-                  value="Online Service"
-                  onclick="UpdateFeatures(this)"
-                />
-                <span class="checkmark"></span>
-                <div class="add-ons-option-outer-box">
-                  <div class="user-plan-option-inner-box">
-                    <h3>Online service</h3>
-                    <p>Access to multiplayer games</p>
-                  </div>
-                  <p class="add-ons-price" id="onlineService">+$1/mo</p>
-                </div>
-              </label>
-              <label for="larger-storage" class="larger-storage">
-                <input
-                  type="checkbox"
-                  class="add-ons-option-checkbox"
-                  id="larger-storage"
-                  value="Larger Storage"
-                  onclick="UpdateFeatures(this)"
-                />
-                <span class="checkmark"></span>
-                <div class="add-ons-option-outer-box">
-                  <div class="user-plan-option-inner-box">
-                    <h3>Larger Storage</h3>
-                    <p>Extra 1TB of cloud save<</p>
-                  </div>
-                  <p class="add-ons-price" id="largerStorage">+$2/mo</p>
-                </div>
-              </label>
-              <label for="customizable-profit">
-                <input
-                  type="checkbox"
-                  class="add-ons-option-checkbox"
-                  id="customizable-profit"
-                  value="Customizable Profit"
-                  onclick="UpdateFeatures(this)"
-                />
-                <span class="checkmark"></span>
-                <div class="add-ons-option-outer-box">
-                  <div class="user-plan-option-inner-box">
-                    <h3>Customizable Profit</h3>
-                    <p>Custom theme on your profile</p>
-                  </div>
-                  <p class="add-ons-price" id="customizableProfit">+$3/mo</p>
-                </div>
-              </label>
-            </form>
+          <div class="headerNum">
+            <h3>1</h3>
+            <div class="header-desktop-text">
+              <p>STEP 1</p>
+              <h3>YOUR INFO</h3>
+            </div>
           </div>
-        </div>
-        <div class="bottom">
-          <button
-            id="goBack"
-            onclick="window.location.href = 'select-plan.html'"
-          >
-            Go Back
-          </button>
-          <button class="nextStep" type="submit" onclick="submitAddOns()">
-            Next Step
-          </button>
+          <div class="headerNum">
+            <h3>2</h3>
+            <div class="header-desktop-text">
+              <p>STEP 2</p>
+              <h3>SELECT PLAN</h3>
+            </div>
+          </div>
+          <div class="headerNum">
+            <h3 id="current-header">3</h3>
+            <div class="header-desktop-text">
+              <p>STEP 3</p>
+              <h3>ADD ONS</h3>
+            </div>
+          </div>
+          <div class="headerNum">
+            <h3>4</h3>
+            <div class="header-desktop-text">
+              <p>STEP 4</p>
+              <h3>SUMMARY</h3>
+            </div>
+          </div>
+        </header>
+        <div class="container-right">
+          <div class="content">
+            <h1 id="select-plan">Pick add-ons</h1>
+            <p id="select-plan">Add-ons help enhance your gaming experience.</p>
+            <div class="add-ons">
+              <form>
+                <label for="online-service">
+                  <input
+                    type="checkbox"
+                    class="add-ons-option-checkbox"
+                    id="online-service"
+                    value="Online Service"
+                    onclick="UpdateFeatures(this)"
+                  />
+                  <span class="checkmark"></span>
+                  <div class="add-ons-option-outer-box">
+                    <div class="user-plan-option-inner-box">
+                      <h3>Online service</h3>
+                      <p>Access to multiplayer games</p>
+                    </div>
+                    <p class="add-ons-price" id="onlineService">+$1/mo</p>
+                  </div>
+                </label>
+                <label for="larger-storage" class="larger-storage">
+                  <input
+                    type="checkbox"
+                    class="add-ons-option-checkbox"
+                    id="larger-storage"
+                    value="Larger Storage"
+                    onclick="UpdateFeatures(this)"
+                  />
+                  <span class="checkmark"></span>
+                  <div class="add-ons-option-outer-box">
+                    <div class="user-plan-option-inner-box">
+                      <h3>Larger Storage</h3>
+                      <p>Extra 1TB of cloud save<</p>
+                    </div>
+                    <p class="add-ons-price" id="largerStorage">+$2/mo</p>
+                  </div>
+                </label>
+                <label for="customizable-profit">
+                  <input
+                    type="checkbox"
+                    class="add-ons-option-checkbox"
+                    id="customizable-profit"
+                    value="Customizable Profit"
+                    onclick="UpdateFeatures(this)"
+                  />
+                  <span class="checkmark"></span>
+                  <div class="add-ons-option-outer-box">
+                    <div class="user-plan-option-inner-box">
+                      <h3>Customizable Profit</h3>
+                      <p>Custom theme on your profile</p>
+                    </div>
+                    <p class="add-ons-price" id="customizableProfit">+$3/mo</p>
+                  </div>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="bottom">
+            <button
+              id="goBack"
+              onclick="window.location.href = 'select-plan.html'"
+            >
+              Go Back
+            </button>
+            <button class="nextStep" type="submit" onclick="submitAddOns()">
+              Next Step
+            </button>
+          </div>
         </div>
       </div>
     </main>
