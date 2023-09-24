@@ -167,5 +167,5 @@ function loadAddOns(){
 
 //check out button
 function checkOut(){
-
+  window.location.href = "success.html";
 }
