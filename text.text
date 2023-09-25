@@ -1,25 +1,66 @@
+body{
+    min-height: 100vh;
+}
+main{
+    background-color: hsl(217, 100%, 97%);
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
+header{
+    min-height: 10rem;
+    width: 100vw;
+    background-image: url("assets/images/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  <!-- Step 4 start -->
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-  
-  
+}
+.headerNum{
+    padding: 0.3rem;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.85rem;
+    margin: 0.5rem;
+    border: solid 0.08rem hsl(229, 24%, 87%);
+    border-radius: 50%;
+    color: hsl(229, 24%, 87%);
+    height: 2rem;
+    width: 2rem;
 
-  <!-- Dynamically add subscription and add-on selections here -->
-
-  Total (per month/year)
-
-  Go Back
-  Confirm
-
-  <!-- Step 4 end -->
-
-  <!-- Step 5 start -->
-
-  Thank you!
-
-  Thanks for confirming your subscription! We hope you have fun 
-  using our platform. If you ever need support, please feel free 
-  to email us at support@loremgaming.com.
-
-  <!-- Step 5 end -->
+    transform: translateY(-1rem);
+}
+#current-header{
+    background-color: hsl(228, 100%, 84%);
+    color: hsl(213, 96%, 18%);
+    border-color: transparent;
+}
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content{
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 20rem;
+    min-height: 45vh;
+    margin-bottom: 13vh;
+    
+    transform: translateY(-3.5rem);
+}

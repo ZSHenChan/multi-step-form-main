@@ -5,6 +5,7 @@
 }
 body{
     min-height: 100dvh;
+    min-width: 100dvw;
 }
 main{
     background-color: hsl(217, 100%, 97%);
@@ -470,7 +471,7 @@ form .isChecked{
 @media(min-width: 800px){
     .container{
         flex-direction: row;
-        max-height: 40rem;
+        max-height: 38rem;
     }
     body{
         min-width: 100vw;
@@ -484,7 +485,7 @@ form .isChecked{
     header{
         /* flex:1; */
         display: flex;
-        height: 39rem;
+        /* height: 39rem; */
         width: auto;
         min-width: 17rem;
         box-sizing: border-box;
