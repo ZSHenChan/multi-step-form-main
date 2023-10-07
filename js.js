@@ -14,8 +14,6 @@ const form = document.getElementById("form-index");
 const userEmail = document.getElementById('userEmail');
 const userPhoneNum = document.getElementById("userPhoneNum")
 
-const nameInput = document.querySelector(`#${userName.id} + :input`);
-
 // submit buttons
 function validateEmail(){
   userName.style.border = "solid 0.01rem hsl(231, 11%, 63%)";
