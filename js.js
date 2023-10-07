@@ -17,12 +17,17 @@ const userPhoneNum = document.getElementById("userPhoneNum")
 
 // submit buttons
 function validateEmail(){
-  if (userEmail.value.match(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/)){
+  if (!userEmail.checkValidity()){
+    invalidMsg.style.opacity = "75%";
+    return false;
+  }
+  else{
     invalidMsg.style.opacity = "0%";
+}
+  if (userEmail.checkValidity()&&userPhoneNum.checkValidity()&&userName.checkValidity()){
     return true;
   }
   else{
-      invalidMsg.style.opacity = "75%";
       return false;
   }
 }
