@@ -14,22 +14,31 @@ const form = document.getElementById("form-index");
 const userEmail = document.getElementById('userEmail');
 const userPhoneNum = document.getElementById("userPhoneNum")
 
+const nameInput = document.querySelector(`#${userName.id} + :input`);
 
 // submit buttons
 function validateEmail(){
+  userName.style.border = "solid 0.01rem hsl(231, 11%, 63%)";
+  userEmail.style.border = "solid 0.01rem hsl(231, 11%, 63%)";
+  userPhoneNum.style.border = "solid 0.01rem hsl(231, 11%, 63%)";
+  if (!userName.checkValidity()){
+    userName.style.border = "1px solid red";
+    return false;
+  }
   if (!userEmail.checkValidity()){
     invalidMsg.style.opacity = "75%";
+    userEmail.style.border = "1px solid red";
     return false;
   }
   else{
     invalidMsg.style.opacity = "0%";
 }
-  if (userEmail.checkValidity()&&userPhoneNum.checkValidity()&&userName.checkValidity()){
-    return true;
+  
+  if (!userPhoneNum.checkValidity()){
+    userPhoneNum.style.border = "1px solid red";
+    return false;
   }
-  else{
-      return false;
-  }
+  return true;
 }
 
 function submitIndex(){

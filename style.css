@@ -119,9 +119,9 @@ input[type=number]::-webkit-outer-spin-button {
     color: hsl(213, 96%, 18%);
     font-weight: 600;
 }
-.user-input input:invalid:required {
+/* .user-input input:invalid{
     border: 1px solid red;
-}
+} */
 .bottom{
     background-color: white;
     max-height: 5rem;
